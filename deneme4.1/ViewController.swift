@@ -57,7 +57,6 @@ class ViewController: UIViewController,UIScrollViewDelegate, UIImagePickerContro
         button1.frame = CGRect(x: width/4-width/4, y: height*15/100, width: width/2, height: button1.frame.height);
         button2.frame = CGRect(x: width/4-width/4, y: height*30/100, width: width/2, height: button1.frame.height);
         button3.frame = CGRect(x: width/4-width/4, y: height*45/100, width: width/2, height: button1.frame.height);
-        print(width);
         
     }
     @objc func deneme(){
