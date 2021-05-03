@@ -16,6 +16,7 @@
 		1903C3EF261CA2CF0028E9AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1903C3ED261CA2CF0028E9AF /* LaunchScreen.storyboard */; };
 		1903C3FA261CA2CF0028E9AF /* deneme4_1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1903C3F9261CA2CF0028E9AF /* deneme4_1Tests.swift */; };
 		1903C405261CA2CF0028E9AF /* deneme4_1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1903C404261CA2CF0028E9AF /* deneme4_1UITests.swift */; };
+		1984F920264092AB001CA25A /* tables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984F91F264092AB001CA25A /* tables.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		1903C400261CA2CF0028E9AF /* deneme4.1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = deneme4.1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1903C404261CA2CF0028E9AF /* deneme4_1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = deneme4_1UITests.swift; sourceTree = "<group>"; };
 		1903C406261CA2CF0028E9AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1984F91F264092AB001CA25A /* tables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tables.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				1903C3DF261CA2CD0028E9AF /* AppDelegate.swift */,
 				1903C3E1261CA2CD0028E9AF /* SceneDelegate.swift */,
 				1903C3E3261CA2CD0028E9AF /* ViewController.swift */,
+				1984F91F264092AB001CA25A /* tables.swift */,
 				1903C3E5261CA2CD0028E9AF /* Main.storyboard */,
 				1903C3EB261CA2CF0028E9AF /* Assets.xcassets */,
 				1903C3ED261CA2CF0028E9AF /* LaunchScreen.storyboard */,
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1903C3EA261CA2CD0028E9AF /* deneme4_1.xcdatamodeld in Sources */,
+				1984F920264092AB001CA25A /* tables.swift in Sources */,
 				1903C3E4261CA2CD0028E9AF /* ViewController.swift in Sources */,
 				1903C3E0261CA2CD0028E9AF /* AppDelegate.swift in Sources */,
 				1903C3E2261CA2CD0028E9AF /* SceneDelegate.swift in Sources */,

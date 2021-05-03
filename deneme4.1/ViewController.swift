@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import CoreData
 class ViewController: UIViewController,UIScrollViewDelegate, UIImagePickerControllerDelegate & UINavigationControllerDelegate{
 
     @IBOutlet weak var lblisim: UILabel!
@@ -33,6 +33,7 @@ class ViewController: UIViewController,UIScrollViewDelegate, UIImagePickerContro
         secimage.addGestureRecognizer(gesture);
         overrideUserInterfaceStyle = .light
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Menu", style: .plain, target: self, action: #selector(menuac))
+        overrideUserInterfaceStyle = .light
     }
     override func viewDidAppear(_ animated: Bool) {
         self.scroll.delegate = self;
@@ -70,10 +71,51 @@ class ViewController: UIViewController,UIScrollViewDelegate, UIImagePickerContro
         scroll.setContentOffset(CGPoint(x:0, y:scroll.contentOffset.y), animated: true);
     }
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        secilimage.image = info[.originalImage] as! UIImage;
+        secilimage.image = info[.originalImage] as? UIImage;
         picker.dismiss(animated: true, completion: nil);
     }
+    @IBAction func alertharita(_ sender: Any) {
+        let alert = UIAlertController(title: "Yapılacak", message: "Haritalar ile ilgili çalışma yapılıp güncellenecek", preferredStyle: .alert);
+        let button = UIAlertAction(title: "Tamam", style: .default, handler: nil);
+        alert.addAction(button)
+        self.present(alert, animated: true, completion: nil);
+    }
+    @IBAction func button3ac(_ sender: Any) {
+        let alert = UIAlertController(title: "Yapılacak", message: "buttonlara özellik verilecek", preferredStyle: .alert);
+        let button = UIAlertAction(title: "Tamam", style: .default, handler: nil);
+        alert.addAction(button)
+        self.present(alert, animated: true, completion: nil);
 
+    }
+    @IBAction func button2ac(_ sender: Any) {
+        let alert = UIAlertController(title: "Yapılacak", message: "buttonlara özellik verilecek", preferredStyle: .alert);
+        let button = UIAlertAction(title: "Tamam", style: .default, handler: nil);
+        alert.addAction(button)
+        self.present(alert, animated: true, completion: nil);
+    }
+    @IBAction func button1ac(_ sender: Any) {
+        let alert = UIAlertController(title: "Yapılacak", message: "buttonlara özellik verilecek", preferredStyle: .alert);
+        let button = UIAlertAction(title: "Tamam", style: .default, handler: nil);
+        alert.addAction(button)
+        self.present(alert, animated: true, completion: nil);
+    }
+    @IBAction func kayit(_ sender: Any) {
+        let appdelegate = UIApplication.shared.delegate as! AppDelegate;
+        let context = appdelegate.persistentContainer.viewContext;
+        let entity = NSEntityDescription.insertNewObject(forEntityName:"Kullanici", into: context);
+        entity.setValue(UUID(), forKey: "uuid");
+        entity.setValue(txtisim.text!, forKey: "isim");
+        entity.setValue(txtsoyisim.text!, forKey: "soyisim");
+        do{
+            try context.save();
+            performSegue(withIdentifier: "totable", sender: nil)
+        }
+        catch{
+            print("hata");
+        }
+    }
+    
+    
 
 }
 
