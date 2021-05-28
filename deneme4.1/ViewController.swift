@@ -100,6 +100,10 @@ class ViewController: UIViewController,UIScrollViewDelegate, UIImagePickerContro
         self.present(alert, animated: true, completion: nil);
     }
     @IBAction func kayit(_ sender: Any) {
+        if(txtisim.text!.isEmpty && txtsoyisim.text!.isEmpty){
+            performSegue(withIdentifier: "totable", sender: nil)
+        }
+        else{
         let appdelegate = UIApplication.shared.delegate as! AppDelegate;
         let context = appdelegate.persistentContainer.viewContext;
         let entity = NSEntityDescription.insertNewObject(forEntityName:"Kullanici", into: context);
@@ -113,6 +117,8 @@ class ViewController: UIViewController,UIScrollViewDelegate, UIImagePickerContro
         catch{
             print("hata");
         }
+        }
+        
     }
     
     
